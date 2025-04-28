@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curd Application</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="postmethod">
+            <i class="fa-solid fa-xmark post-i"  onclick="postmark_none()"></i>
+            <form id="uploadForm">
+                <input type="text" id="nameInput" placeholder="Enter Image Name" required>
+                <input type="file" id="imageInput" accept="image/*" required>
+                <button type="submit" class="postBut">Upload</button>
+            </form>        
+        </div>
+
+        <form id="updateForm" class="updateForm">
+            <i class="fa-solid fa-xmark put-i" onclick="putmethod_none()"></i>
+
+            <div class="nametag">
+                <p>ID : </p>
+                <input type="text" id="idInput" placeholder="Enter Image ID" required>
+            </div>
+
+        <div class="filetype">
+            <p>Uploads : </p>
+            <input type="file" id="imageput" accept="image/*" required>
+        </div>
+
+            <button type="submit">Update</button>
+
+        </form>
+
+        <!-- delete form -->
+
+        <form id="deleteForm">
+            <input type="text" id="deleteInput" placeholder="Enter Image ID" required>
+            <button type="submit">Delete</button>
+        </form>
+    
+            
+
+        <h1>Styless.com curd</h1>
+        <div>
+            <button onclick="postmark_block()">create User</button>
+        </div>
+        <table class="tap-1">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Buttons</th>
+            </tr>
+            <!-- <tr> -->
+                <!-- <td>1</td>
+                <td>Balamurugan</td>
+                <td>My Image</td> -->
+                <!-- <td> -->
+                    <!-- <div class="td-button"> -->
+                        <!-- <button class="td-but1" onclick="putmethod_block()">Edit</button> -->
+                        <!-- <button class="td-but2">Delete</button> -->
+                    <!-- </div> -->
+                <!-- </td> -->
+            <!-- </tr> -->
+        </table>
+    </div>
+    <script src="./script2.js"></script>
+    <script src="./personal.js"></script>
+</body>
+
+</html>

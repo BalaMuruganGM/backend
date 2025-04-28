@@ -1,0 +1,368 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    /* background-color: skyblue; */
+    width: 100%;
+    min-height: 100vh;
+}
+
+table{
+    width:80%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tap-1 th , .tap-1 td , .tab-1 th{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    width: 300px;
+
+}
+
+.td-button{
+    display: flex;
+    /* width:100%; */
+    gap: 20px;
+    justify-self: center;
+}
+
+.td-button button{
+    padding: 10px;
+    width: 100px;
+    border: unset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.td-but1{
+    background-color: green;
+}
+.td-but2{
+    background-color: red;
+}
+
+td img{
+    width: 130px;
+    height: 65px;
+}
+
+
+.postmethod{
+    height: 500px;
+    width: 650px;
+    background-color: white;
+    position:absolute;
+    transform:translate(50% 50%);
+    border-radius: 10px;
+    display: none;
+}
+
+.postmethod .post-i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.updateForm{
+    height: 500px;
+    width: 550px;
+    background-color: white;
+    position:absolute;
+    transform:translate(50% 50%);
+    border-radius: 10px;
+    top: 20%;
+    background-color:green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    display: none;
+}
+
+.nametag , .filetype {
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.nametag input{
+    width: 250px;
+    padding: 10px;
+    border: unset;
+}
+
+.updateForm button{
+    width: 250px;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: unset;
+    background-color: red;
+    color:white;
+}
+
+.filetype{
+    padding-left: 25px;
+}
+
+.updateForm .put-i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+.tb2{
+    margin-top: 5%;
+    width: 100%;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.tb2 th , .tb2 tr , .tb2 td {
+    text-align: center;
+    border: 1px solid black;
+    padding:5px;
+    width: 40px;
+}
+
+.editForm{
+    position: absolute;
+    top: 10px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color:navy;
+    color: white;
+    display: none;
+    padding: 10px;
+}
+
+.editForm .editHead{
+    width: 100%;
+    align-items:center;
+}
+
+.fbXmark{
+    position:absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.form-group{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15%;
+    gap: 50px;
+    margin-top: 8px;
+}
+
+.editForm .fb{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin: 15px 0px;
+}
+
+.fb button{
+    background-color: brown;
+    color: white;
+    border: unset;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.editButton{
+    padding: 5px 10px;
+    border: unset;
+    background-color: green;
+    color: white;
+    border-radius:5px;
+    cursor: pointer;
+
+}
+
+.bodyListingTable{
+    margin: 20px 0px 10px 0px;
+}
+
+.tb-3{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tb-3 tr , .tb-3 td , .tb-3 th{
+    border: 1px solid black;
+    padding: 10px;
+} 
+
+
+
+.bodyForm{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    gap: 10%;
+    min-height: 100vh; 
+    background-color:lightgray;
+    /* color: white; */
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 20px;
+    display: none;
+}
+
+.body-groupId{
+    margin-bottom: 20px;
+}
+
+.body-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0px 10px; */
+    /* margin-top: 10px; */
+}
+
+.body-group input{
+    width: 50%;
+    height: 25px;
+}
+
+.body-group label{
+    width: 50%;
+}
+
+.bodyFormBut{
+    width: 100%;
+    align-items:center;
+    display: flex;
+    justify-content: center;
+}
+
+.bodyFormBut button{
+    width: 20%;
+    font-size: 18px;
+    color:white;
+    background-color: crimson;
+    border-radius: 10px;
+    border: unset;
+}
+
+.bodyForm h1{
+    margin: 10px 0px;
+    width: 100%;
+    align-items: center;
+}
+
+.bodyXmark{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.buttonTag{
+    display: flex;
+    gap: 5px;
+}
+
+.buttonTag button{
+    padding: 10px;
+    color: white;
+    border: unset;
+    border-radius: 5px;
+    background-color: green;
+    cursor: pointer;
+
+}
+
+
+/* post button start */
+
+.postCreat{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.postCreat button{
+    width: 200px;
+    height: 50px;
+    border-radius:15px;
+    background-color: green;
+    color: white;
+    border: unset;
+    cursor: pointer;
+
+}
+
+
+/* post create metho start */
+.bodyPost{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: lightgray;
+    position: absolute;
+    top:150vh;
+    display: none;
+}
+
+.bodyPost-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bodyPostH1{
+    text-align: center;
+    margin:10px 0px;
+}
+
+.bodyPost-groupBut{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+.bodyPost-groupBut button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: unset;
+    border-radius: 10px;
+}
+
+.bodyPostX{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}

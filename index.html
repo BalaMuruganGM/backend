@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curd Application</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- <div class="postmethod">
+            <i class="fa-solid fa-xmark post-i"  onclick="postmark_none()"></i>
+            <form id="uploadForm">
+                <input type="text" id="nameInput" placeholder="Enter Image Name" required>
+                <input type="file" id="imageInput" accept="image/*" required>
+                <button type="submit" class="postBut">Upload</button>
+            </form>        
+        </div> -->
+
+        <form id="updateForm" class="updateForm">
+            <i class="fa-solid fa-xmark put-i" onclick="putmethod_none()"></i>
+
+            <div class="nametag">
+                <p>ID : </p>
+                <input type="text" id="idInput" placeholder="Enter Image ID" required>
+            </div>
+
+            <div class="filetype">
+                <p>Uploads : </p>
+                <input type="file" id="imageput" accept="image/*" required>
+            </div>
+            <button type="submit">Update</button>
+        </form>
+
+        <!-- delete form -->
+
+        <!-- <form id="deleteForm">
+            <input type="text" id="deleteInput" placeholder="Enter Image ID" required>
+            <button type="submit">Delete</button>
+        </form> -->
+
+
+
+        <!-- <h1>Styless.com curd</h1> -->
+        <div>
+            <!-- <button onclick="postmark_block()">create User</button> -->
+        </div>
+        <table class="tap-1">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Buttons</th>
+            </tr>
+            <!-- <tr> -->
+            <!-- <td>1</td>
+                <td>Balamurugan</td>
+                <td>My Image</td> -->
+            <!-- <td> -->
+            <!-- <div class="td-button"> -->
+            <!-- <button class="td-but1" onclick="putmethod_block()">Edit</button> -->
+            <!-- <button class="td-but2">Delete</button> -->
+            <!-- </div> -->
+            <!-- </td> -->
+            <!-- </tr> -->
+        </table>
+
+        <!-- <table class="tap-2">
+             <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Buttons</th>
+            </tr> -->
+        <!-- </table> -->
+
+        <table class="tb2">
+            <tr>
+                <th>Id</th>
+                <th>Img1</th>
+                <th>Img2</th>
+                <th>Img3</th>
+                <th>Img4</th>
+                <th>carName</th>
+                <th>carRate</th>
+                <th>car Model</th>
+                <th>carMillage</th>
+                <th>FuelType</th>
+                <th>carCC</th>
+                <th>Button</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>car view</th>
+                <th>carType</th>
+                <th>carDoor</th>
+                <th>carSeat</th>
+                <th>carpower</th>
+                <th>engineType</th>
+                <th>carTarget</th>
+                <th>carColor</th>
+                <th>interColor</th>
+                <th>fuelTupe</th>
+                <th>cylinder</th>
+                <th>Warranty</th>
+            </tr>
+        </table>
+
+        <!-- edit form start -->
+
+
+        <!-- Edit Form Section -->
+        <div id="editForm" class="editForm">
+            <i class="fa-solid fa-xmark fbXmark" onclick="fbXmark()"></i>
+            <h2 class="editHead">Update Car Details</h2>
+            <form id="updateCarForm">
+                <!-- Hidden Input for Car ID -->
+                <div class="form-group">
+                    <label>Id : </label>
+                    <input id="editId" name="id">
+                </div>
+
+                <!-- Text Input Fields -->
+                <div class="form-group">
+                    <label for="name">Car Name : </label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carName">Car Model Name : </label>
+                    <input type="text" id="carName" name="carName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carPrice">Price : </label>
+                    <input type="number" id="carPrice" name="carPrice" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carModel">Model : </label>
+                    <input type="text" id="carModel" name="carModel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carMillage">Mileage : </label>
+                    <input type="number" id="carMillage" name="carMillage" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fuelType">Fuel Type : </label>
+                    <input type="text" id="fuelType" name="fuelType" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carCC">Engine Capacity (CC) : </label>
+                    <input type="number" id="carCC" name="carCC" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carType">Car Type : </label>
+                    <input type="text" id="carType" name="carType">
+                </div>
+
+                <div class="form-group">
+                    <label for="carDoor">Doors : </label>
+                    <input type="text" id="carDoor" name="carDoor">
+                </div>
+
+                <div class="form-group">
+                    <label for="carSeat">Seats : </label>
+                    <input type="number" id="carSeat" name="carSeat">
+                </div>
+
+                <div class="form-group">
+                    <label for="carpower">Horse Power : </label>
+                    <input type="text" id="carpower" name="carpower">
+                </div>
+
+                <div class="form-group">
+                    <label for="carAutomation">Automation : </label>
+                    <input type="text" id="carAutomation" name="carAutomation">
+                </div>
+
+                <div class="form-group">
+                    <label for="carTarget">Target : </label>
+                    <input type="text" id="carTarget" name="carTarget">
+                </div>
+
+                <div class="form-group">
+                    <label for="carColor">Car Color : </label>
+                    <input type="text" id="carColor" name="carColor">
+                </div>
+
+                <div class="form-group">
+                    <label for="carInterColor">Interior Color : </label>
+                    <input type="text" id="carInterColor" name="carInterColor">
+                </div>
+
+                <div class="form-group">
+                    <label for="carCylinder">Cylinder : </label>
+                    <input type="text" id="carCylinder" name="carCylinder">
+                </div>
+
+                <div class="form-group">
+                    <label for="carWaranty">Warranty : </label>
+                    <input type="text" id="carWaranty" name="carWaranty">
+                </div>
+
+                <!-- File Upload Fields -->
+                <div class="form-group">
+                    <label for="photo1">Photo 1 : </label>
+                    <input type="file" id="photo1" name="photo1">
+                </div>
+
+                <div class="form-group">
+                    <label for="photo2">Photo 2 : </label>
+                    <input type="file" id="photo2" name="photo2">
+                </div>
+
+                <div class="form-group">
+                    <label for="photo3">Photo 3 : </label>
+                    <input type="file" id="photo3" name="photo3">
+                </div>
+
+                <div class="form-group">
+                    <label for="photo4">Photo 4 : </label>
+                    <input type="file" id="photo4" name="photo4">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group fb">
+                    <button type="submit">Update Car</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Edti form clouses -->
+
+
+        <!--Body Listing Satrt-->
+
+        <h1 class="bodyListingTable">Body Listing Table</h1>
+
+        <div class="postCreat">
+            <button onclick="postBodyOn()">Create User</button>
+        </div>
+
+        <table class="tb-3">
+            <tr>
+                <th>Id</th>
+                <th>Image1</th>
+                <th>Image2</th>
+                <th>Image3</th>
+                <th>Image4</th>
+                <th>MainName</th>
+                <th>carModel</th>
+                <th>carKm</th>
+                <th>carRate1</th>
+                <th>carRate2</th>
+                <th>carMonth</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>carType</th>
+                <th>carDoor</th>
+                <th>carSeat</th>
+                <th>carPower</th>
+                <th>carAutomation</th>
+                <th>carTarget</th>
+                <th>carColor</th>
+                <th>carInterColor</th>
+                <th>carFuel</th>
+                <th>carCylinder</th>
+                <th>carWaranty</th>
+            </tr>
+        </table>
+
+        <!--Body Listing Clouses-->
+
+        
+
+        <!-- bodyList Update Form start -->
+        <form class="bodyForm" id="bodyForm">
+            <h1>Body Form List</h1>
+            <i class="fa-solid fa-xmark bodyXmark" onclick="bodyX()"></i>
+            <div class="body-group body-groupId">
+                <label for="id">ID</label>
+                <input type="number" id="carId">
+            </div>
+            <div class="body-group">
+                <label for="mainName">Main Name:</label><br>
+                <input type="text" id="mainName"><br><br>
+            </div>
+            <div class="body-group">
+                <label for="carModel">Car Model:</label><br>
+                <input type="text" id="carModel"><br><br>
+            </div>
+            <div class="body-group">
+                <label for="carKm">Car Km:</label><br>
+                <input type="text" id="carKm"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carRate1">Car Rate1:</label><br>
+                <input type="text" id="carRate1"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carRate2">Car Rate2:</label><br>
+                <input type="text" id="carRate2"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carMonth">Car Month:</label><br>
+                <input type="text" id="carMonth"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carType">Car Type:</label><br>
+                <input type="text" id="carType"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carDoor">Car Door:</label><br>
+                <input type="text" id="carDoor"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carSeat">Car Seat:</label><br>
+                <input type="text" id="carSeat"><br><br>
+            </div>
+            <div class="body-group">
+                <label for="carPower">Car Power:</label><br>
+                <input type="text" id="carPower"><br><br>
+            </div>
+            <div class="body-group">
+                <label for="carAutomation">Car Automation:</label><br>
+                <input type="text" id="carAutomation"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carTarget">Car Target:</label><br>
+                <input type="text" id="carTarget"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carColor">Car Color:</label><br>
+                <input type="text" id="carColor"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carInterColor">Interior Color:</label><br>
+                <input type="text" id="carInterColor"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carFuel">Car Fuel:</label><br>
+                <input type="text" id="carFuel"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carCylinder">Car Cylinder:</label><br>
+                <input type="text" id="carCylinder"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="carWaranty">Car Waranty:</label><br>
+                <input type="text" id="carWaranty"><br><br>
+            </div>
+
+            <!-- File inputs for images -->
+            <div class="body-group">
+                <label for="image1">Image 1:</label><br>
+                <input type="file" id="image1"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="image2">Image 2:</label><br>
+                <input type="file" id="image2"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="image3">Image 3:</label><br>
+                <input type="file" id="image3"><br><br>
+            </div>
+
+            <div class="body-group">
+                <label for="image4">Image 4:</label><br>
+                <input type="file" id="image4"><br><br>
+            </div>
+            <div class="bodyFormBut">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <!-- Body list update Form Clouses -->
+
+<!-- Body post from start -->
+
+    <div class="bodyPost">
+
+        <h1 class="bodyPostH1">Enter your Post data</h1>
+        <i class="fa-solid fa-xmark bodyPostX" onclick="postBodyOff()"></i>
+
+        <div class="bodyPost-group">
+            <label for="mainName">Main Name:</label>
+            <input type="text" id="mainName">  
+           </div>
+
+           <div class="bodyPost-group">
+            <label for="carModel">Car Model:</label>
+            <input type="text" id="carModel">  
+          </div>
+        
+           <div class="bodyPost-group">
+            <label for="carKm">Car Km:</label>
+            <input type="text" id="carKm">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carRate1">Car Rate1:</label>
+            <input type="text" id="carRate1">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carRate2">Car Rate2:</label>
+            <input type="text" id="carRate2">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carMonth">Car Month:</label>
+            <input type="text" id="carMonth">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carType">Car Type:</label>
+            <input type="text" id="carType">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carDoor">Car Door:</label>
+            <input type="text" id="carDoor">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carSeat">Car Seat:</label>
+            <input type="text" id="carSeat">  
+           </div>
+        
+           <div class="bodyPost-group"> 
+            <label for="carPower">Car Power:</label>
+            <input type="text" id="carPower">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carAutomation">Car Automation:</label>
+            <input type="text" id="carAutomation">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carTarget">Car Target:</label>
+            <input type="text" id="carTarget">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carColor">Car Color:</label>
+            <input type="text" id="carColor">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carInterColor">Interior Color:</label>
+            <input type="text" id="carInterColor">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carFuel">Car Fuel:</label>
+            <input type="text" id="carFuel">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carCylinder">Car Cylinder:</label>
+            <input type="text" id="carCylinder">  
+           </div>
+        
+           <div class="bodyPost-group">
+            <label for="carWaranty">Car Waranty:</label>
+            <input type="text" id="carWaranty">  
+           </div>
+        
+          <!-- File inputs for images -->
+        
+          <div class="bodyPost-group">
+            <label for="image1">Image 1:</label>
+            <input type="file" id="image1">  
+          </div>
+        
+          <div class="bodyPost-group">
+            <label for="image2">Image 2:</label>
+            <input type="file" id="image2">  
+          </div>
+        
+          <div class="bodyPost-group">
+            <label for="image3">Image 3:</label>
+            <input type="file" id="image3">  
+          </div>
+        
+          <div class="bodyPost-group">
+            <label for="image4">Image 4:</label>
+            <input type="file" id="image4">  
+          </div>
+        
+          <div class="bodyPost-groupBut">
+            <button type="button" onclick="submitForm()">Submit</button>
+          </div>
+    </div>
+    <!-- Body List Post Method clouses -->
+
+    </div>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./script2.js"></script>
+    <script src="./personal.js"></script>
+</body>
+
+</html>

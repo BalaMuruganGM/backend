@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Car Listing</title>
+</head>
+<body>
+
+    <h1>Upload Car Details</h1>
+
+    <form id="carForm" enctype="multipart/form-data">
+
+        <label>Image Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Photo 1:</label><br>
+        <input type="file" name="photo1" required><br><br>
+
+        <label>Photo 2:</label><br>
+        <input type="file" name="photo2" required><br><br>
+
+        <label>Photo 3:</label><br>
+        <input type="file" name="photo3" required><br><br>
+
+        <label>Photo 4:</label><br>
+        <input type="file" name="photo4" required><br><br>
+
+        <label>Car Name:</label><br>
+        <input type="text" name="carName" required><br><br>
+
+        <label>Car Price:</label><br>
+        <input type="text" name="carPrice" required><br><br>
+
+        <label>Car Model:</label><br>
+        <input type="text" name="carModel" required><br><br>
+
+        <label>Car Millage:</label><br>
+        <input type="text" name="carMillage" required><br><br>
+
+        <label>Fuel Type:</label><br>
+        <input type="text" name="fuelType" required><br><br>
+
+        <label>Car CC:</label><br>
+        <input type="text" name="carCC" required><br><br>
+
+        <label>Car Type:</label><br>
+        <input type="text" name="carType"><br><br>
+
+        <label>Car Door:</label><br>
+        <input type="text" name="carDoor"><br><br>
+
+        <label>Car Seat:</label><br>
+        <input type="text" name="carSeat"><br><br>
+
+        <label>Car Power:</label><br>
+        <input type="text" name="carpower"><br><br>
+
+        <label>Car Automation:</label><br>
+        <input type="text" name="carAutomation"><br><br>
+
+        <label>Car Target:</label><br>
+        <input type="text" name="carTarget"><br><br>
+
+        <label>Car Color:</label><br>
+        <input type="text" name="carColor"><br><br>
+
+        <label>Car Interior Color:</label><br>
+        <input type="text" name="carInterColor"><br><br>
+
+        <label>Car Cylinder:</label><br>
+        <input type="text" name="carCylinder"><br><br>
+
+        <label>Car Warranty:</label><br>
+        <input type="text" name="carWaranty"><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+        const form = document.getElementById('carForm');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            fetch('http://localhost:4015/Listing/post', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Car details uploaded successfully!');
+                form.reset(); // clear the form
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error uploading car details.');
+            });
+        });
+    </script>
+
+</body>
+</html>
