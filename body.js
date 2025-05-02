@@ -3,8 +3,8 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const path = require('path');
 const multer = require('multer');
-// const cors = require('cors');
-// const { error } = require('console');
+const cors = require('cors');
+const { error } = require('console');
 const app = express();
 app.use(cors());
 app.use( bodyParser.json());
@@ -20,7 +20,6 @@ const db = mysql.createConnection({
     user: "u471227235_Tamilan",
     password: "Tamilan@1234",
     database: "u471227235_Tamilan_car123"
-
 });
 
 db.connect((error)=>{
