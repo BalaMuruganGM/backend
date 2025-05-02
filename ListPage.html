@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Upload Form</title>
+</head>
+<body>
+
+  <form id="carForm">
+    <input type="text" name="mainName" placeholder="Main Name" required>
+    <input type="text" name="carModel" placeholder="Car Model" required>
+    <input type="text" name="carKm" placeholder="KM" required>
+    <input type="text" name="carRate1" placeholder="Rate 1" required>
+    <input type="text" name="carRate2" placeholder="Rate 2" required>
+    <input type="text" name="carMonth" placeholder="Per Month" required>
+    <input type="text" name="carType" placeholder="Car Type" required>
+    <input type="text" name="carDoor" placeholder="Doors" required>
+    <input type="text" name="carSeat" placeholder="Seats" required>
+    <input type="text" name="carPower" placeholder="Power" required>
+    <input type="text" name="carAutomation" placeholder="Transmission" required>
+    <input type="text" name="carTarget" placeholder="Target Location" required>
+    <input type="text" name="carColor" placeholder="Exterior Color" required>
+    <input type="text" name="carInterColor" placeholder="Interior Color" required>
+    <input type="text" name="carFuel" placeholder="Fuel Type" required>
+    <input type="text" name="carCylinder" placeholder="Cylinders" required>
+    <input type="text" name="carWaranty" placeholder="Warranty" required>
+    <input type="text" name="carName2" placeholder="Car Name 2">
+    <input type="file" name="image1" accept="image/*" required>
+    <input type="file" name="image2" accept="image/*" required>
+    <input type="file" name="image3" accept="image/*" required>
+    <input type="file" name="image4" accept="image/*" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="responseMessage"></div>
+
+  <script>
+    document.getElementById("carForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = document.getElementById("carForm");
+      const formData = new FormData(form);
+
+      fetch("http://localhost:4015/pageList/post", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status) {
+          document.getElementById("responseMessage").innerText = "Upload successful!";
+        } else {
+          document.getElementById("responseMessage").innerText = "Upload failed: " + data.message;
+        }
+      })
+      .catch(error => {
+        document.getElementById("responseMessage").innerText = "Error: " + error.message;
+      });
+    });
+  </script>
+
+</body>
+</html>

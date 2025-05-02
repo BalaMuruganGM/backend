@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="uploadForm">
+        <input type="text" id="nameInput" placeholder="Enter Image Name" required>
+        <input type="file" id="imageInput" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent page reload
+
+    let fileInput = document.getElementById('imageInput'); // Get file input
+    let nameInput = document.getElementById('nameInput'); // Get name input
+
+    if (fileInput.files.length === 0) {
+        alert('Please select an image.');
+        return;
+    }
+
+    let formData = new FormData();
+    formData.append('name', nameInput.value); // Add image name
+    formData.append('images', fileInput.files[0]); // Add image file (backend expects 'images')
+
+    try {
+        let response = await fetch('http://localhost:4015/images/post', {
+            method: 'POST',
+            body: formData
+        });
+
+        let result = await response.json();
+
+        if (result.status) {
+            alert('Image uploaded successfully!');
+            console.log(result);
+        } else {
+            alert('Failed to upload image.');
+            console.log(result.message);
+        }
+    } catch (error) {
+        console.log('Error:', error);
+        alert('Something went wrong.');
+    }
+});
+
+    </script>    
+</body>
+</html>

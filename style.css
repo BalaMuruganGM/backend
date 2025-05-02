@@ -1,0 +1,502 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    /* background-color: skyblue; */
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+
+table{
+    width:80%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tap-1 th , .tap-1 td , .tab-1 th{
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    width: 300px;
+
+}
+
+.td-button{
+    display: flex;
+    /* width:100%; */
+    gap: 20px;
+    justify-self: center;
+}
+
+.td-button button{
+    padding: 10px;
+    width: 100px;
+    border: unset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.td-but1{
+    background-color: green;
+}
+.td-but2{
+    background-color: red;
+}
+
+td img{
+    width: 130px;
+    height: 65px;
+}
+
+
+.postmethod{
+    height: 500px;
+    width: 650px;
+    background-color: white;
+    position:absolute;
+    transform:translate(50% 50%);
+    border-radius: 10px;
+    display: none;
+}
+
+.postmethod .post-i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.updateForm{
+    height: 500px;
+    width: 550px;
+    background-color: white;
+    position:absolute;
+    transform:translate(50% 50%);
+    border-radius: 10px;
+    top:30px;
+    background-color:green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    display: none;
+}
+
+.nametag , .filetype {
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.nametag input{
+    width: 250px;
+    padding: 10px;
+    border: unset;
+}
+
+.updateForm button{
+    width: 250px;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: unset;
+    background-color: red;
+    color:white;
+}
+
+.filetype{
+    padding-left: 25px;
+}
+
+.updateForm .put-i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+.tb2{
+    /* margin-top: 5%; */
+    width: 100%;
+    font-size: 10px;
+    padding: 5px;
+    border: unset;
+    border-collapse: collapse;
+}
+
+.tb2 th , .tb2 tr , .tb2 td {
+    text-align: center;
+    border: 1px solid black;
+    padding:5px;
+    width: 90px;
+}
+
+.editForm{
+    position: absolute;
+    top: 10px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color:navy;
+    color: white;
+    display: none;
+    padding: 10px;
+}
+
+.editForm .editHead{
+    width: 100%;
+    align-items:center;
+}
+
+.fbXmark{
+    position:absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.form-group{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15%;
+    gap: 50px;
+    margin-top: 8px;
+}
+
+.editForm .fb{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin: 15px 0px;
+}
+
+.fb button{
+    background-color: brown;
+    color: white;
+    border: unset;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.editButton{
+    padding: 5px 10px;
+    border: unset;
+    background-color: green;
+    color: white;
+    border-radius:5px;
+    cursor: pointer;
+
+}
+
+.bodyListingTable{
+    margin: 20px 0px 10px 0px;
+}
+
+.tb-3{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tb-3 tr , .tb-3 td , .tb-3 th{
+    border: 1px solid black;
+    padding: 10px;
+} 
+
+
+
+.bodyForm{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    gap: 10%;
+    min-height: 100vh; 
+    background-color:lightgray;
+    /* color: white; */
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 30px;
+    display: none;
+}
+
+.body-groupId{
+    margin-bottom: 20px;
+}
+
+.body-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0px 10px; */
+    /* margin-top: 10px; */
+}
+
+.body-group input{
+    width: 50%;
+    height: 25px;
+}
+
+.body-group label{
+    width: 50%;
+}
+
+.bodyFormBut{
+    width: 100%;
+    align-items:center;
+    display: flex;
+    justify-content: center;
+}
+
+.bodyFormBut button{
+    width: 20%;
+    font-size: 18px;
+    color:white;
+    background-color: crimson;
+    border-radius: 10px;
+    border: unset;
+}
+
+.bodyForm h1{
+    margin: 10px 0px;
+    width: 100%;
+    align-items: center;
+}
+
+.bodyXmark{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.buttonTag{
+    display: flex;
+    gap: 5px;
+}
+
+.buttonTag button{
+    padding: 10px;
+    color: white;
+    border: unset;
+    border-radius: 5px;
+    background-color: green;
+    cursor: pointer;
+
+}
+
+
+/* post button start */
+
+.postCreat{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.postCreat button{
+    width: 200px;
+    height: 50px;
+    border-radius:15px;
+    background-color: green;
+    color: white;
+    border: unset;
+    cursor: pointer;
+
+}
+
+
+/* post create metho start */
+.bodyPost{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: lightgray;
+    position: absolute;
+    top:30px;
+    display: none;
+}
+
+.bodyPost-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bodyPostH1{
+    text-align: center;
+    margin:10px 0px;
+}
+
+.bodyPost-groupBut{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+.bodyPost-groupBut button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: unset;
+    border-radius: 10px;
+}
+
+.bodyPostX{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* LBody List */
+
+.tb-4{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.tb-4 tr , .tb-4 td , .tb-4 th{
+    border: 1px solid black;
+    padding: 10px;
+} 
+
+.LPost{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    position: absolute;
+    top: 30px;
+    display: none;
+}
+
+.LPost-group{
+    display: flex;
+    width:80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.LPostX{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.Lbody_postCreate{
+    display: flex;
+    width:100%;
+    height: 60px;
+    justify-content: start;
+    margin:10px;
+    padding-left: 10px;
+}
+
+.Lbody_postCreate button{
+    height:50px;
+    width: 150px;
+    border: unset;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: green;
+    cursor: pointer;
+}
+
+
+
+.LPostH1{
+    margin-top: 40px;
+}
+
+.LForm{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    width: 45%;
+    border-radius: 15px;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+    position: absolute;
+    top:30px;
+    display: none;
+}
+.LbodyX{
+    position: absolute;
+    top: 15px;
+    right:15px;
+    cursor: pointer;
+}
+
+
+.TableSelect{
+    display: flex;
+    height:50px;
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: start;
+    padding-left: 15px;
+}
+
+.selectTap{
+    height: 100%;
+    width: 150px;
+    background-color: red;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tb-1 , .tb-2 , .tb-3 , .tb-4 , .bodyListingTable , .postCreat ,
+.LPostH1 , .Lbody_postCreate ,  .homePageH1 , .Latest{
+    display: none;
+    /* display:inline-block; */
+}
+
+.tb-1 , .tb-2{
+    margin-top: 10px;
+}
+
+.homePageH1 , .Latest{
+    margin-top: 10px;
+}
+
+.tb-1 , .homePageH1{
+    display: inline-block;
+}
