@@ -11,10 +11,10 @@ app.use( bodyParser.json());
 
 
 const db = mysql.createConnection({
-    host : "localhost",
-    user : "root",
-    password : "",
-    database : "bala"
+    host: "auth-db1559.hstgr.io",
+    user: "u471227235_Tamilan",
+    password: "Tamilan@1234",
+    database: "u471227235_Tamilan_car123"
 });
 
 db.connect((error)=>{
@@ -760,11 +760,11 @@ app.put('/pageList/update/:id', upload.fields([
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.listen(4015 , (error)=>{
+app.listen(3000 , (error)=>{
     if(error){
         console.log(error);
     }
-    console.log("port is running");
+    console.log("port is running : 3000");
 })
 
 
