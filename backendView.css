@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    padding-top: 3%;
+    gap: 20px;
+}
+
+.Ad-h1{
+    font-size: 25px;
+}
+
+
+.tbOne tr , .tbOne th , .tbOne td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-collapse: collapse;
+    height: auto;
+    height: 80px;
+}
+
+.tbOne{
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.tdImg{
+    height: 70px;
+    width: 70px;
+}
+
+table{
+    border-collapse: collapse;
+}
+ th , td {
+    border: 1px solid black;
+ }
+
+td button{
+    padding: 10px 20px;
+    background-color: green;
+    border: unset;
+    border-radius: 5px;
+}
+
+.tdbut1{
+    margin-right: 10px;
+}
