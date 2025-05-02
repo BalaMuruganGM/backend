@@ -11,12 +11,12 @@ app.use( bodyParser.json());
 
 
 const db = mysql.createConnection({
-    host: "193.203.184.112",      
-    user: "u471227235_Tamilan",
-    password: "Tamilan@1234",
-    database: "u471227235_Tamilan_car123",
-    connectTimeout: 10000
-  });
+  host: "auth-db1559.hstgr.io",         // replace with the IP shown in hPanel
+  user: "u471227235_Tamilan",
+  password: "Tamilan@1234",
+  database: "u471227235_Tamilan_car123",
+  connectTimeout: 10000
+});
 
 db.connect((error)=>{
     if(!error){
