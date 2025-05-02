@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -11,11 +12,11 @@ app.use( bodyParser.json());
 
 
 const db = mysql.createConnection({
-  host: "auth-db1559.hstgr.io",         // replace with the IP shown in hPanel
-  user: "u471227235_Tamilan",
-  password: "Tamilan@1234",
-  database: "u471227235_Tamilan_car123",
-  connectTimeout: 10000
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    connectTimeout: 10000
 });
 
 db.connect((error)=>{
